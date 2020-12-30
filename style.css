@@ -22,8 +22,16 @@ body {
 
 .active-socials {
   opacity: 1 !important;
-  top: -70px !important;
+  bottom: 90px !important;
   pointer-events: all !important;
+}
+
+.active-shareBtn {
+  background-color: #48556a !important;
+}
+
+.active-shareBtn svg path {
+  fill: white;
 }
 
 .card {
@@ -59,6 +67,7 @@ body {
 .card .body-content {
   padding: 30px;
   width: 60%;
+  position: relative;
 }
 
 .card .body-content .title {
@@ -130,6 +139,7 @@ body {
   position: relative;
   -webkit-transition: .2s ease all;
   transition: .2s ease all;
+  cursor: pointer;
 }
 
 .card .body-content .source .shareBtn .sharesocial {
@@ -177,5 +187,83 @@ body {
 
 .card .body-content .source .shareBtn .sharesocial .socials ul li a img {
   width: 18px;
+}
+
+.card .body-content .sharesocial {
+  pointer-events: none;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+  opacity: 0;
+  right: -15%;
+  bottom: 60px;
+  position: absolute;
+  padding: 13px 20px;
+  background-color: #48556a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+
+.card .body-content .sharesocial h5 {
+  color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  opacity: 0.5;
+}
+
+.card .body-content .sharesocial .socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .body-content .sharesocial .socials ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.card .body-content .sharesocial .socials ul li a img {
+  width: 18px;
+}
+
+@media all and (max-width: 450px) {
+  .card {
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 20px;
+    overflow: hidden;
+  }
+  .card .img {
+    width: 100%;
+  }
+  .card .img img {
+    width: inherit;
+    height: auto;
+  }
+  .card .body-content {
+    width: 100%;
+  }
+  .card .body-content .title {
+    font-size: 1rem;
+  }
+  .card .body-content .source .shareBtn .sharesocial {
+    right: 0;
+    top: unset !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

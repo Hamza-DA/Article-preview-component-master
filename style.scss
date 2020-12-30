@@ -18,8 +18,16 @@ body{
 }
 .active-socials{
     opacity: 1 !important;
-    top: -70px !important;
+    bottom: 90px !important;
     pointer-events: all !important;
+}
+.active-shareBtn{
+    background-color: $darkBlue !important;
+    svg{
+        path{
+                fill: white;
+            }
+        }
 }
 .card{
     box-shadow: 0 20px 40px hsl(212, 23%, 90%);
@@ -42,6 +50,7 @@ body{
     .body-content{
         padding: 30px;
         width: 60%;
+        position: relative;
         .title{
             color: $darkBlue;
             font-size: 1.3rem;
@@ -87,21 +96,7 @@ body{
                 border-radius: 50%;
                 position: relative;
                 transition: .2s ease all;
-                // &:hover{
-                //     background-color: $darkBlue;
-                //     svg{
-                //         path{
-                //             fill: white;
-                //         }
-                //     }
-                //     .sharesocial{
-                //         opacity: 1;
-                //         top: -70px;
-                //         pointer-events: all;
-                        
-                //     }
-
-                // }
+                cursor: pointer;
                 .sharesocial{
                     pointer-events: none;
                     transition: .2s ease all;
@@ -112,13 +107,6 @@ body{
                     background-color: $darkBlue;
                     display: flex;
                     border-radius: 10px;
-                    // &:hover{
-                        
-                    //         opacity: 1;
-                    //         top: -70px;
-                    //         pointer-events: all;
-                        
-                    // }
                     h5{
                         color: $lightBlue;
                         display: flex;
@@ -142,6 +130,75 @@ body{
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+        .sharesocial{
+            pointer-events: none;
+            transition: .2s ease all;
+            opacity: 0;
+            right: -15%;
+            bottom: 60px;
+            position: absolute;
+            padding: 13px 20px;
+            background-color: $darkBlue;
+            display: flex;
+            border-radius: 10px;
+            h5{
+                color: $lightBlue;
+                display: flex;
+                align-items: center;
+                margin: 0 10px;
+                font-weight: 500;
+                letter-spacing: 3px;
+                opacity: 0.5;
+            }
+            .socials{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    li{
+                        list-style: none;
+                        margin: 0 10px;
+                        a{
+                            img{
+                                width: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media all and (max-width:450px){
+    .card{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin: 0 20px;
+        overflow: hidden;
+        .img{
+            width: 100%;
+            img{
+                width: inherit;
+                height: auto;
+            }
+        }
+        .body-content{
+            width: 100%;
+            .title{
+                font-size: 1rem;
+            }
+            .source{
+                .shareBtn{
+                    .sharesocial{
+                        right: 0;
+                        top: unset !important;
                     }
                 }
             }
