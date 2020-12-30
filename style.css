@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.active-socials {
+  opacity: 1 !important;
+  top: -70px !important;
+  pointer-events: all !important;
+}
+
+.card {
+  -webkit-box-shadow: 0 20px 40px #e0e5eb;
+          box-shadow: 0 20px 40px #e0e5eb;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 730px;
+  height: 280px;
+}
+
+.card .img {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.card .img img {
+  width: auto;
+  height: inherit;
+}
+
+.card .body-content {
+  padding: 30px;
+  width: 60%;
+}
+
+.card .body-content .title {
+  color: #48556a;
+  font-size: 1.3rem;
+}
+
+.card .body-content .excerpt {
+  color: #6d7f97;
+  font-size: 13px;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.card .body-content .source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .body-content .source .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .body-content .source .author img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.card .body-content .source .author .namedate h4 {
+  color: #48556a;
+  font-size: 13px;
+}
+
+.card .body-content .source .author .namedate .date {
+  opacity: 0.4;
+}
+
+.card .body-content .source .shareBtn {
+  width: 30px;
+  height: 30px;
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+}
+
+.card .body-content .source .shareBtn .sharesocial {
+  pointer-events: none;
+  -webkit-transition: .2s ease all;
+  transition: .2s ease all;
+  opacity: 0;
+  top: -50px;
+  position: absolute;
+  padding: 13px 20px;
+  background-color: #48556a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+
+.card .body-content .source .shareBtn .sharesocial h5 {
+  color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  opacity: 0.5;
+}
+
+.card .body-content .source .shareBtn .sharesocial .socials ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .body-content .source .shareBtn .sharesocial .socials ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.card .body-content .source .shareBtn .sharesocial .socials ul li a img {
+  width: 18px;
+}
+/*# sourceMappingURL=style.css.map */

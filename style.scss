@@ -1,0 +1,150 @@
+$darkBlue: hsl(217, 19%, 35%);
+$desaBlue: hsl(214, 17%, 51%);
+$grayBlue: hsl(212, 23%, 69%);
+$lightBlue: hsl(210, 46%, 95%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: $lightBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.active-socials{
+    opacity: 1 !important;
+    top: -70px !important;
+    pointer-events: all !important;
+}
+.card{
+    box-shadow: 0 20px 40px hsl(212, 23%, 90%);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 730px;
+    height: 280px;
+    .img{
+        width: 280px;
+        height: 280px;
+        overflow: hidden;
+        img{
+            width: auto;
+            height: inherit;
+        }
+    }
+    .body-content{
+        padding: 30px;
+        width: 60%;
+        .title{
+            color: $darkBlue;
+            font-size: 1.3rem;
+        }
+        .excerpt{
+            color: $desaBlue;
+            font-size: 13px;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+        .source{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .author{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                img{
+                    width: 40px;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                }
+                .namedate{
+                    h4{
+                        color: $darkBlue;
+                        font-size: 13px;
+                    }
+                    .date{
+                        opacity: 0.4;
+                    }
+                }
+            }
+
+            .shareBtn{
+                width: 30px;
+                height: 30px;
+                background-color: $lightBlue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                position: relative;
+                transition: .2s ease all;
+                // &:hover{
+                //     background-color: $darkBlue;
+                //     svg{
+                //         path{
+                //             fill: white;
+                //         }
+                //     }
+                //     .sharesocial{
+                //         opacity: 1;
+                //         top: -70px;
+                //         pointer-events: all;
+                        
+                //     }
+
+                // }
+                .sharesocial{
+                    pointer-events: none;
+                    transition: .2s ease all;
+                    opacity: 0;
+                    top: -50px;
+                    position: absolute;
+                    padding: 13px 20px;
+                    background-color: $darkBlue;
+                    display: flex;
+                    border-radius: 10px;
+                    // &:hover{
+                        
+                    //         opacity: 1;
+                    //         top: -70px;
+                    //         pointer-events: all;
+                        
+                    // }
+                    h5{
+                        color: $lightBlue;
+                        display: flex;
+                        align-items: center;
+                        margin: 0 10px;
+                        font-weight: 500;
+                        letter-spacing: 3px;
+                        opacity: 0.5;
+                    }
+                    .socials{
+                        ul{
+                            display: flex;
+                            align-items: center;
+                            li{
+                                list-style: none;
+                                margin: 0 10px;
+                                a{
+                                    img{
+                                        width: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
