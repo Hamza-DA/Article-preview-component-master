@@ -22,7 +22,6 @@ body {
 
 .active-socials {
   opacity: 1 !important;
-  bottom: 90px !important;
   pointer-events: all !important;
 }
 
@@ -32,6 +31,28 @@ body {
 
 .active-shareBtn svg path {
   fill: white;
+}
+
+@-webkit-keyframes shareBtn {
+  0% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes shareBtn {
+  0% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 .card {
@@ -54,6 +75,7 @@ body {
 }
 
 .card .img {
+  border-radius: 10px 0 0 10px;
   width: 280px;
   height: 280px;
   overflow: hidden;
@@ -142,51 +164,9 @@ body {
   cursor: pointer;
 }
 
-.card .body-content .source .shareBtn .sharesocial {
-  pointer-events: none;
-  -webkit-transition: .2s ease all;
-  transition: .2s ease all;
-  opacity: 0;
-  top: -50px;
-  position: absolute;
-  padding: 13px 20px;
-  background-color: #48556a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 10px;
-}
-
-.card .body-content .source .shareBtn .sharesocial h5 {
-  color: #ecf2f8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 10px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  opacity: 0.5;
-}
-
-.card .body-content .source .shareBtn .sharesocial .socials ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card .body-content .source .shareBtn .sharesocial .socials ul li {
-  list-style: none;
-  margin: 0 10px;
-}
-
-.card .body-content .source .shareBtn .sharesocial .socials ul li a img {
-  width: 18px;
+.card .body-content .source .shareBtn:hover svg {
+  -webkit-animation: shareBtn .2s ease;
+          animation: shareBtn .2s ease;
 }
 
 .card .body-content .sharesocial {
@@ -195,7 +175,7 @@ body {
   transition: .2s ease all;
   opacity: 0;
   right: -15%;
-  bottom: 60px;
+  bottom: 90px;
   position: absolute;
   padding: 13px 20px;
   background-color: #48556a;
@@ -257,13 +237,28 @@ body {
   }
   .card .body-content {
     width: 100%;
+    padding: 20px 30px;
   }
   .card .body-content .title {
     font-size: 1rem;
   }
-  .card .body-content .source .shareBtn .sharesocial {
+  .card .body-content .source {
+    margin-top: 25px;
+  }
+  .card .body-content .source .shareBtn {
+    z-index: 2;
+    background-color: #ecf2f8 !important;
+  }
+  .card .body-content .source .shareBtn svg path {
+    fill: #6d7f97;
+  }
+  .card .body-content .sharesocial {
     right: 0;
     top: unset !important;
+    left: 0;
+    bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
