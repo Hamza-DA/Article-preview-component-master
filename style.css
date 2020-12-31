@@ -261,4 +261,9 @@ body {
     padding-bottom: 25px;
   }
 }
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */
